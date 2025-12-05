@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="img/Logo.png">
+  <meta name="author1" content="JOSH ANDRE A. BANGUIS">
+  <meta name="author2" content="CYRAH C. OCON">
+  <meta name="author3" content="RENZ SIMON A. OLANDE">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L.A.M.I – Reserve</title>
+  <style>
+    /* RESET & BASE */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* TOPBAR */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .logo { display: flex; align-items: center; font-size: 1.3rem; font-weight: bold; }
+    .logo img { height: 40px; margin-right: 12px; }
+    .menu a { margin-left: 20px; font-weight: 600; color: #333; transition: 0.3s; }
+    .menu a:hover { color: #0073e6; }
+    .reserve-link {
+      display: inline-block;
+      background: #0073e6;
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+    .reserve-link:hover { background: #005dc0; transform: scale(1.05); }
+
+    /* NAVBAR */
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 30px; background: #fff; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+    .links a { margin: 0 15px; font-weight: 600; color: #333; transition: 0.3s; }
+    .links a:hover { color: #0073e6; }
+    .search-box input { padding: 6px 15px; border: 1px solid #ccc; border-radius: 25px; outline: none; transition: 0.3s; }
+    .search-box input:focus { border-color: #0073e6; box-shadow: 0 0 5px rgba(0,115,230,0.3); }
+
+    /* BANNER */
+    .banner {
+      background: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+    }
+    .banner h2 { font-size: 2.2rem; margin-bottom: 12px; color: #333; }
+    .banner p { font-size: 1rem; color: #555; }
+
+    /* RESERVATION FORM */
+    .reservation-form {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .reservation-form h3 { margin-bottom: 20px; color: #0073e6; text-align: center; }
+    .reservation-form label { display: block; margin-bottom: 6px; font-weight: 600; }
+    .reservation-form input[type="text"],
+    .reservation-form input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .reservation-form input[type="text"]:focus,
+    .reservation-form input[type="email"]:focus { border-color: #0073e6; }
+
+    .reservation-form button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: #0073e6;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .reservation-form button:hover { background: #005dc0; transform: scale(1.03); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) { .banner { padding: 40px 15px; } .reservation-form { margin: 20px 15px; } }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="CRC">
+      <a href="INDEX.html">PROJECT LAMI</a>
+    </div>
+    <div class="menu">
+      <a href="reserve.html" class="reserve-link">Reserve a Meal & Drink</a>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="links">
+      <a href="meals.html">Meals</a>
+      <a href="drinks.html">Drinks</a>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+    </div>
+  </div>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <h2>Reserve Your Meal & Drink</h2>
+    <p>Please fill out the form below to make your reservation.</p>
+  </div>
+
+  <!-- RESERVATION FORM -->
+  <div class="reservation-form">
+    <h3>Reservation Form</h3>
+    <form action="#" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="meal">Meal Choice (Input Meal Number)</label>
+      <input type="text" id="meal" name="meal" placeholder="Type your meal choice" required>
+
+      <label for="drink">Drink Choice (Input Drink Number)</label>
+      <input type="text" id="drink" name="drink" placeholder="Type your drink choice" required>
+
+      <label for="payment">Preferred Payment Method</label>
+      <input type="text" id="payment" name="payment" placeholder="Type your preferred payment" required>
+
+      <button type="submit">Submit Reservation</button>
+    </form>
+  </div>
+
+</body>
+</html>

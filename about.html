@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="img/Logo.png">
+  <meta name="author1" content="JOSH ANDRE A. BANGUIS">
+  <meta name="author2" content="CYRAH C. OCON">
+  <meta name="author3" content="RENZ SIMON A. OLANDE">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L.A.M.I</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 12px;
+    }
+    .menu a {
+      margin-left: 20px;
+      font-weight: 600;
+      color: #333;
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      color: #0073e6;
+    }
+
+    .reserve-link {
+  display: inline-block;
+  background: #0073e6;
+  color: #fff !important;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.reserve-link:hover {
+  background: #005dc0;
+  transform: scale(1.05);
+}
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    .links a {
+      margin: 0 15px;
+      font-weight: 600;
+      color: #333;
+      transition: 0.3s;
+    }
+    .links a:hover {
+      color: #0073e6;
+    }
+    .search-box input {
+      padding: 6px 15px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .search-box input:focus {
+      border-color: #0073e6;
+      box-shadow: 0 0 5px rgba(0,115,230,0.3);
+    }
+
+    /* BANNER */
+    .banner {
+      background: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+    }
+    .banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      color: #333;
+    }
+    .banner p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* MAIN CONTENT LAYOUT */
+    .main-layout {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto;
+      flex-wrap: wrap;
+    }
+
+    /* ABOUT IMAGE */
+    .menu-article img {
+      width: 480px;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid #ccc;
+      filter: grayscale(70%);
+      transition: transform 0.3s, filter 0.3s;
+    }
+    .menu-article img:hover {
+      transform: scale(1.08);
+      filter: grayscale(0%);
+      border-color: #0073e6;
+    }
+    .menu-article figcaption {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    /* RIGHT COLUMN TEXT */
+    .about-text {
+      width: 480px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      line-height: 1.6;
+    }
+    .about-text h3 {
+      margin-bottom: 12px;
+      font-size: 1.8rem;
+    }
+    .about-text p {
+      margin-bottom: 12px;
+      color: #444;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .menu-article img {
+        width: 400px;
+        height: 280px;
+      }
+    }
+    @media (max-width: 768px) {
+      .main-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+      .about-text {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="CRC">
+      <a href="../INDEX.html">PROJECT LAMI</a>
+    </div>
+
+    <div class="menu">
+      <a href="reserve.html" class="reserve-link">Reserve a Meal & Drink</a>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="links">
+      <a href="../meals.html">Meals</a>
+      <a href="../drinks.html">Drinks</a>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+    </div>
+  </div>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <h2>About Project L.A.M.I.</h2>
+    <p>Learn more about the purpose, mission, and team behind the system.</p>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-layout">
+
+    <!-- LEFT IMAGE -->
+    <article class="menu-article">
+      <figure>
+        <img src="img/Team-Icon.png" alt="About Image">
+        <figcaption>Our Mission</figcaption>
+      </figure>
+    </article>
+
+    <!-- RIGHT ABOUT TEXT -->
+    <section class="about-text">
+      <h3>Who We Are</h3>
+      <p>
+        Project L.A.M.I. (Live Automated Menu Interface) is a student-led innovation designed 
+        to modernize the way PSHS-CRC students access canteen updates.
+      </p>
+
+      <h3>What We Do</h3>
+      <p>
+        We aim to provide real-time visibility of meals, drinks, stock availability, 
+        and menu updates — making the canteen experience faster, easier, and more convenient.
+      </p>
+
+      <h3>Our Vision</h3>
+      <p>
+        To build a modern, efficient, and transparent food monitoring system that serves every Pisay scholar.
+      </p>
+    </section>
+
+  </div>
+
+</body>
+</html>
